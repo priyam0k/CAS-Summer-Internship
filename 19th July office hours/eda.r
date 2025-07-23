@@ -4,7 +4,7 @@ library(tidyverse)
 library(dplyr)      
 library(tidyverse)  
 
-setwd("D:\file cas")  
+setwd("D:\CAS-Summer-Internship")  
 
 data <- read_excel("2025 CAS East Asia Summer Program Dataset.xlsx", sheet = "Dataset for Student")  # Sheet name or number
 
