@@ -4,13 +4,7 @@ library(tidyverse)
 library(dplyr)      
 library(tidyverse)  
 
-# Download the Excel file from your GitHub repo (replace with your actual URL)
-download.file(
-  "https://raw.githubusercontent.com/priyam0k/CAS-Summer-Internship
-/main/2025%20CAS%20East%20Asia%20Summer%20Program%20Dataset.xlsx",
-  destfile = "2025 CAS East Asia Summer Program Dataset.xlsx",
-  mode = "wb"
-)
+setwd("D:\file cas")  
 
 data <- read_excel("2025 CAS East Asia Summer Program Dataset.xlsx", sheet = "Dataset for Student")  # Sheet name or number
 
