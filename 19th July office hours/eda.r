@@ -4,7 +4,7 @@ library(tidyverse)
 library(dplyr)      
 library(tidyverse)  
 
-setwd("C:/Users/果然/Documents/CAS/Summer Program/2025/2025 Summer Program")  
+setwd("/2025 CAS East Asia Summer Program Dataset.xlsx")  
 
 data <- read_excel("2025 CAS East Asia Summer Program Dataset.xlsx", sheet = "Dataset for Student")  # Sheet name or number
 
