@@ -4,16 +4,12 @@ library(tidyverse)
 library(dplyr)      
 library(tidyverse)  
 
-setwd("D:\file cas")  
+data <- read_csv("D:/CAS-Summer-Internship/2025 CAS East Asia Summer Program Dataset.xlsx")
 
-data <- read_excel("2025 CAS East Asia Summer Program Dataset.xlsx", sheet = "Dataset for Student")  # Sheet name or number
-
-
-data$Power <- as.factor(data$Power)
-data$Brand <- as.factor(data$Brand)
-data$Gas <- as.factor(data$Gas)
-data$Region <- as.factor(data$Region)
-
+library(ggplot2)
+library(readxl)
+library(tidyverse)
+library(dplyr)
 data$DriverAgeBand <- cut(data$DriverAge,
                           breaks = c(17, 21, 26, 31, 41, 51, 71, Inf),
                           labels = c("18-21", "22-25", "26-30", "31-40", "41-50", "51-70", "71+"),
@@ -23,10 +19,10 @@ table(data$DriverAgeBand, useNA = "ifany")
 
 
 data$CarAgeBand <- cut(data$CarAge,
-  			breaks = c(0, 1, 10, Inf),
-  			labels = c("New [0-1)", "Moderate [1-10]", "Old (10+)"),
-  			right = TRUE,
-  			include.lowest = TRUE
+            breaks = c(0, 1, 10, Inf),
+            labels = c("New [0-1)", "Moderate [1-10]", "Old (10+)"),
+            right = TRUE,
+            include.lowest = TRUE
 )
 table(data$CarAgeBand, useNA = "ifany")
 
