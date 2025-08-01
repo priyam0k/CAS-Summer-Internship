@@ -4,7 +4,19 @@ library(tidyverse)
 library(dplyr)      
 library(tidyverse)  
 
+<<<<<<< HEAD
 data <- read_csv("D:/CAS-Summer-Internship/2025 CAS East Asia Summer Program Dataset.xlsx")
+=======
+setwd("D:\CAS-Summer-Internship")  
+
+data <- read_excel("2025 CAS East Asia Summer Program Dataset.xlsx", sheet = "Dataset for Student")  # Sheet name or number
+
+
+data$Power <- as.factor(data$Power)
+data$Brand <- as.factor(data$Brand)
+data$Gas <- as.factor(data$Gas)
+data$Region <- as.factor(data$Region)
+>>>>>>> 9a467308315be4dece0697ffaea05b39f39763cb
 
 library(ggplot2)
 library(readxl)
